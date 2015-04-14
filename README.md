@@ -4,6 +4,15 @@ Simple Framework for API Client.
 
 Client, Model, APIを分離するアイデアです.
 
+## Client層
+ - ユーザとのやり取りはすべてこのClient経由で行う。
+ - 基本的にはモデルインスタンスを返却する。
+ - APIを直接呼び出すことも可能。
+## Model層
+ - APIからデータを取得し、自インスタンスをClientへ返却する。
+## API層
+ - 実際にWebServerのAPIを叩く部分。
+
 ## Installation
 
 Add this line to your application's Gemfile:
