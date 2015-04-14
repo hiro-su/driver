@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = "0.0.1"
   spec.authors       = ["hiro-su"]
   spec.email         = ["h.sugipon@gmail.com"]
-  spec.summary       = %q{Simple Framework of API Client.}
-  spec.description   = %q{Simple Framework of API Client.}
+  spec.summary       = %q{Simple Framework for API Client.}
+  spec.description   = %q{Simple Framework for API Client.}
   spec.homepage      = "https://github.com/hiro-su/driver"
   spec.license       = "MIT"
 

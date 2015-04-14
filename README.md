@@ -1,7 +1,8 @@
 # Driver
 
-Simple Framework of API Client
-Client, Model, APIを分離する場合のアイデアです.
+Simple Framework for API Client.
+
+Client, Model, APIを分離するアイデアです.
 
 ## Installation
 
