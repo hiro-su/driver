@@ -13,8 +13,6 @@ module Driver
 
         modules.each_with_index do |m, i|
           # controller
-          hoge = "#{self}::#{m}".underscore
-
           autoload m, "#{self}::#{m}".underscore
 
           # model
