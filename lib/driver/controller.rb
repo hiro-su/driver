@@ -9,21 +9,16 @@ module Driver
         @dir ||= File.dirname(__FILE__)
 
         # api
-        #autoload :API, File.join(@dir, "#{self}/api".underscore)
         autoload :API, "#{self}/api".underscore
 
         modules.each_with_index do |m, i|
           # controller
-          #autoload m, File.join(@dir, "#{self}::#{m}".underscore)
           hoge = "#{self}::#{m}".underscore
-          require "pry"
-          binding.pry
 
           autoload m, "#{self}::#{m}".underscore
 
           # model
           module_name = self.to_s.sub("::#{self.to_s.demodulize}", '').constantize
-          #module_name.autoload m, File.join(@dir, "#{self}::Model::#{m}".underscore)
           module_name.autoload m, "#{self}::Model::#{m}".underscore
 
           modules[i] = "#{self}::#{m}".constantize

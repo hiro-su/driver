@@ -1,4 +1,3 @@
-#require 'active_support/core_ext/object'
 require 'active_support/core_ext/string/inflections'
 
 module Driver

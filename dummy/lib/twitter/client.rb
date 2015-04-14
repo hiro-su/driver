@@ -6,7 +6,6 @@ module Twitter
       @apikey = apikey
       @secret = secret
 
-      binding.pry
       @api = API.new(@apikey, @secret)
     end
 

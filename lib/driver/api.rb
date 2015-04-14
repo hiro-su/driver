@@ -10,7 +10,7 @@ module Driver
 
         modules.each_with_index do |m, i|
           api = "#{self}::#{m.to_s.demodulize}"
-          autoload m.to_s.demodulize, File.join(@dir, api.underscore)
+          autoload m.to_s.demodulize, api.underscore
           modules[i] = api.constantize
         end
 
