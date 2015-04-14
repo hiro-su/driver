@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'driver/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "driver"
-  spec.version       = Driver::VERSION
+  spec.version       = "0.0.1"
   spec.authors       = ["hiro-su"]
   spec.email         = ["h.sugipon@gmail.com"]
   spec.summary       = %q{Simple Framework of API Client.}
@@ -18,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "activesupport"
+  spec.add_dependency "activesupport", "~> 4.2.1"
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"

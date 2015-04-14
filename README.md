@@ -1,6 +1,7 @@
 # Driver
 
-TODO: Write a gem description
+Simple Framework of API Client
+Client, Model, APIを分離する場合のアイデアです.
 
 ## Installation
 
@@ -20,7 +21,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'driver'
+```
 
 ## Contributing
 

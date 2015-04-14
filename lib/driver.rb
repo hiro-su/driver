@@ -1,4 +1,3 @@
-require "driver/version"
 require "driver/controller"
 require "driver/model"
 require "driver/api"
