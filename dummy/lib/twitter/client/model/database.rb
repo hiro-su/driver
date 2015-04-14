@@ -3,5 +3,9 @@ module Twitter
     def create(name)
       @api.create_database(name)
     end
+
+    def delete(name)
+      @api.hoge(name)
+    end
   end
 end

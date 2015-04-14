@@ -7,3 +7,5 @@ require 'twitter'
 
 client = Twitter::Client.new('apikey', 'secret')
 p client.db.create("testdb")
+p "=" * 100
+p client.db.delete("testdb")

@@ -1,7 +1,7 @@
 module Twitter
   class Client
     class API < Driver::API
-      drive Database
+      drive Database, Hoge
 
       def initialize(apikey, secret, options = {})
         @apikey = apikey
