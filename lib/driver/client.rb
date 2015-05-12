@@ -1,18 +1,16 @@
 module Driver
-  class Controller
+  class Client
     class << self
       def const_missing(name)
         name
       end
 
       def drive(*modules)
-        @dir ||= File.dirname(__FILE__)
-
         # api
         autoload :API, "#{self}/api".underscore
 
         modules.each_with_index do |m, i|
-          # controller
+          # client
           autoload m, "#{self}::#{m}".underscore
 
           # model
@@ -23,10 +21,6 @@ module Driver
         end
 
         include *modules
-      end
-
-      def basedir(dir)
-        @dir = dir
       end
     end
 

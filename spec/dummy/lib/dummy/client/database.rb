@@ -1,8 +1,8 @@
-module Twitter
+module Dummy
   class Client
     module Database
       def db
-        Twitter::Database.new(@api)
+        Dummy::Database.new(@api)
       end
     end
   end

@@ -1,5 +1,5 @@
-module Twitter
-  class Client < Driver::Controller
+module Dummy
+  class Client < Driver::Client
     drive Database
 
     def initialize(apikey, secret, options = {})

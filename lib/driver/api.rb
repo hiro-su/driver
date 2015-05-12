@@ -6,8 +6,6 @@ module Driver
       end
 
       def drive(*modules)
-        @dir ||= File.dirname(__FILE__)
-
         modules.each_with_index do |m, i|
           api = "#{self}::#{m.to_s.demodulize}"
           autoload m.to_s.demodulize, api.underscore

@@ -1,7 +1,7 @@
-module Twitter
+module Dummy
   class Client::API
-    module Hoge
-      def hoge(name)
+    module Database
+      def create_database(name)
         "#{__method__}: #{name}"
       end
     end

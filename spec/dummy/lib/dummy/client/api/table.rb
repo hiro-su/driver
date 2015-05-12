@@ -1,7 +1,7 @@
-module Twitter
+module Dummy
   class Client::API
-    module Database
-      def create_database(name)
+    module Table
+      def drop_table(name)
         "#{__method__}: #{name}"
       end
     end
