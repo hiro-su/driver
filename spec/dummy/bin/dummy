@@ -7,5 +7,10 @@ $LOAD_PATH << Pathname.new(__FILE__).dirname.join('..', 'lib').expand_path.to_s
 require 'dummy'
 
 client = Dummy::Client.new('apikey', 'secret')
+
 puts client.db.create("testdb")
 puts client.db.delete("testdb")
+
+client.dbs.each do |db|
+  puts db
+end
