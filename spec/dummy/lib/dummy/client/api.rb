@@ -1,7 +1,7 @@
 module Dummy
   class Client
     class API < Driver::API
-      api Database, Table
+      drive Database, Table
 
       def initialize(apikey, secret, options = {})
         @apikey = apikey

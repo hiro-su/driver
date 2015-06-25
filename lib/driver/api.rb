@@ -5,7 +5,7 @@ module Driver
         name
       end
 
-      def api(*modules)
+      def drive(*modules)
         modules.each_with_index do |m, i|
           api = "#{self}::#{m.to_s.demodulize}"
           autoload m.to_s.demodulize, api.underscore
