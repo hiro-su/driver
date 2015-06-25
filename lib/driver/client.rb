@@ -13,14 +13,18 @@ module Driver
           # client
           autoload m, "#{self}::#{m}".underscore
 
-          # model
-          module_name = self.to_s.sub("::#{self.to_s.demodulize}", '').constantize
-          module_name.autoload m, "#{self}::Model::#{m}".underscore
-
           modules[i] = "#{self}::#{m}".constantize
         end
 
         include *modules
+      end
+
+      def model(*modules)
+        modules.each_with_index do |m, i|
+          # model
+          module_name = self.to_s.sub("::#{self.to_s.demodulize}", '').constantize
+          module_name.autoload m, "#{self}::Model::#{m}".underscore
+        end
       end
     end
 
