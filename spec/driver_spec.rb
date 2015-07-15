@@ -19,7 +19,13 @@ describe Driver do
     it "return Dummy::Database instance" do
       expect(client.db.class).to eq Dummy::Database
       expect(client.db.create("test")).to eq "create_database: test"
-      expect(client.db.delete("test")).to eq "drop_table: test"
+      expect(client.db.delete("test")).to eq "drop_database: test"
+    end
+
+    it "return Dummy::Database::Table instance" do
+      expect(client.db.table.class).to eq Dummy::Database::Table
+      expect(client.db.table.create("test")).to eq "create_table: test"
+      expect(client.db.table.delete("test")).to eq "drop_table: test"
     end
   end
 end

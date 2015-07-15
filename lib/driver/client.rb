@@ -25,6 +25,8 @@ module Driver
           module_name = self.to_s.sub("::#{self.to_s.demodulize}", '').constantize
           module_name.autoload m, "#{self}::Model::#{m}".underscore
         end
+
+        Driver::Model.concerns
       end
     end
 

@@ -14,3 +14,5 @@ puts client.db.delete("testdb")
 client.dbs.each do |db|
   puts db
 end
+
+puts client.db.table.create("testtbl")
